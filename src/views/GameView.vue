@@ -40,7 +40,7 @@
       <!-- Game Frame -->
       <div class="game-frame-container" ref="gameContainer">
         <iframe 
-          :src="`/games/${game.id}/index.html`"
+          :src="gameUrl"
           class="game-frame"
           frameborder="0"
           allowfullscreen
@@ -101,6 +101,12 @@ const gameContainer = ref(null)
 
 const game = computed(() => {
   return getGameById(route.params.id)
+})
+
+const gameUrl = computed(() => {
+  if (!game.value) return ''
+  const base = import.meta.env.BASE_URL || '/'
+  return `${base}games/${game.value.id}/index.html`
 })
 
 const formatPlays = (plays) => {
