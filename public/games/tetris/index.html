@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Block Puzzle - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>🧱 Block Puzzle</h1>
+      <div class="score-board">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="level">Level: <span id="level">1</span></div>
+        <div class="high-score">Best: <span id="highScore">0</span></div>
+      </div>
+    </div>
+    
+    <div class="game-area">
+      <canvas id="gameCanvas" width="200" height="400"></canvas>
+      <div class="side-panel">
+        <div class="next-piece">
+          <h3>Next</h3>
+          <canvas id="nextCanvas" width="80" height="80"></canvas>
+        </div>
+        <div class="stats">
+          <div class="stat">
+            <span class="stat-label">Lines</span>
+            <span class="stat-value" id="lines">0</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">Start Game</button>
+      <button id="pauseBtn" class="btn btn-secondary" disabled>Pause</button>
+    </div>
+    
+    <div class="game-instructions">
+      <h3>Controls</h3>
+      <p><kbd>←</kbd> <kbd>→</kbd> Move | <kbd>↑</kbd> Rotate | <kbd>↓</kbd> Soft Drop | <kbd>Space</kbd> Hard Drop</p>
+    </div>
+  </div>
+  
+  <script src="game.js"></script>
+</body>
+</html>

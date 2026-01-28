@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Battleship - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>🚢 Battleship</h1>
+      <div id="message" class="message">Place your ships!</div>
+    </div>
+    <div class="boards-container">
+      <div class="board-section">
+        <h3>Your Fleet</h3>
+        <div id="playerBoard" class="board"></div>
+      </div>
+      <div class="board-section">
+        <h3>Enemy Waters</h3>
+        <div id="enemyBoard" class="board"></div>
+      </div>
+    </div>
+    <div class="ships-to-place" id="shipsToPlace">
+      <span>Ships: </span>
+      <button class="ship-btn selected" data-size="5">Carrier (5)</button>
+      <button class="ship-btn" data-size="4">Battleship (4)</button>
+      <button class="ship-btn" data-size="3">Cruiser (3)</button>
+      <button class="ship-btn" data-size="3">Submarine (3)</button>
+      <button class="ship-btn" data-size="2">Destroyer (2)</button>
+    </div>
+    <div class="game-controls">
+      <button id="rotateBtn" class="btn btn-secondary">Rotate (R)</button>
+      <button id="startBtn" class="btn btn-primary" disabled>Start Battle!</button>
+      <button id="resetBtn" class="btn btn-secondary">Reset</button>
+    </div>
+    <div class="score-board">
+      <div class="score player-score">Your Hits: <span id="playerHits">0</span>/17</div>
+      <div class="score enemy-score">Enemy Hits: <span id="enemyHits">0</span>/17</div>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

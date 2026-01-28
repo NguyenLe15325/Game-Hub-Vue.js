@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Connect Four - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>Connect Four</h1>
+      <div class="player-indicator">
+        <span id="turnIndicator" class="red-turn">Red's Turn</span>
+      </div>
+    </div>
+    <div class="score-board">
+      <div class="score red-score">🔴 Red: <span id="redScore">0</span></div>
+      <div class="score yellow-score">🟡 Yellow: <span id="yellowScore">0</span></div>
+    </div>
+    <div id="gameBoard" class="game-board"></div>
+    <div class="game-modes">
+      <button class="btn btn-mode active" data-mode="pvp">2 Players</button>
+      <button class="btn btn-mode" data-mode="ai">vs Computer</button>
+    </div>
+    <div class="game-controls">
+      <button id="restartBtn" class="btn btn-primary">New Game</button>
+    </div>
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Click a column to drop your disc. Connect 4 in a row to win!</p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

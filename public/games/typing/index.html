@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Typing Speed - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>⌨️ Typing Speed Test</h1>
+      <div class="score-board">
+        <div class="stat">WPM: <span id="wpm">0</span></div>
+        <div class="stat">Accuracy: <span id="accuracy">100</span>%</div>
+        <div class="stat">Time: <span id="timer">60</span>s</div>
+      </div>
+    </div>
+    <div id="textDisplay" class="text-display"></div>
+    <textarea id="inputArea" class="input-area" placeholder="Start typing here..." disabled></textarea>
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">Start Test</button>
+      <select id="duration" class="duration-select">
+        <option value="30">30 seconds</option>
+        <option value="60" selected>60 seconds</option>
+        <option value="120">2 minutes</option>
+      </select>
+    </div>
+    <div class="results" id="results" style="display: none;">
+      <h2>Results</h2>
+      <div class="result-stats">
+        <div class="result-item"><span class="label">Words Per Minute</span><span id="finalWpm" class="value">0</span></div>
+        <div class="result-item"><span class="label">Accuracy</span><span id="finalAccuracy" class="value">0%</span></div>
+        <div class="result-item"><span class="label">Characters</span><span id="finalChars" class="value">0</span></div>
+        <div class="result-item"><span class="label">Errors</span><span id="finalErrors" class="value">0</span></div>
+      </div>
+    </div>
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Type the text as fast and accurately as you can!</p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

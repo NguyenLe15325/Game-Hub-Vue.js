@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minesweeper - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>💣 Minesweeper</h1>
+      <div class="score-board">
+        <div class="mines">💣 <span id="minesLeft">10</span></div>
+        <div class="timer">⏱️ <span id="timer">0</span></div>
+      </div>
+    </div>
+    <div class="difficulty">
+      <button class="btn-diff active" data-size="9" data-mines="10">Easy</button>
+      <button class="btn-diff" data-size="12" data-mines="25">Medium</button>
+      <button class="btn-diff" data-size="16" data-mines="45">Hard</button>
+    </div>
+    <div id="gameBoard" class="game-board"></div>
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">New Game</button>
+    </div>
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Left click to reveal | Right click to flag 🚩</p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

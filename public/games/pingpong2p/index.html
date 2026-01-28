@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ping Pong 2P - Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <a href="/" class="back-btn">← Back to Games</a>
+        <h1>🏓 Ping Pong 2P</h1>
+        
+        <div class="score-board">
+            <div class="player-score">
+                <span class="player-label">Player 1 (W/S)</span>
+                <span id="score1" class="score">0</span>
+            </div>
+            <div class="vs">VS</div>
+            <div class="player-score">
+                <span class="player-label">Player 2 (↑/↓)</span>
+                <span id="score2" class="score">0</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="800" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="startBtn" class="btn">Start Game</button>
+            <button id="resetBtn" class="btn secondary">Reset Scores</button>
+        </div>
+        
+        <div class="info">
+            <p><strong>Player 1:</strong> W (up) / S (down)</p>
+            <p><strong>Player 2:</strong> ↑ (up) / ↓ (down)</p>
+            <p>First to <strong>10 points</strong> wins!</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

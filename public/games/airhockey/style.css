@@ -1,0 +1,62 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.game-wrapper {
+  background: rgba(26, 26, 46, 0.9);
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.game-header { text-align: center; margin-bottom: 10px; }
+.game-header h1 { color: #60a5fa; font-size: 1.6rem; margin-bottom: 8px; }
+.score-board { display: flex; justify-content: center; gap: 30px; }
+.score { padding: 8px 20px; border-radius: 10px; font-weight: bold; font-size: 1.1rem; }
+.red-score { background: rgba(239, 68, 68, 0.2); color: #ef4444; }
+.blue-score { background: rgba(59, 130, 246, 0.2); color: #3b82f6; }
+#gameCanvas {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  border: 3px solid #60a5fa;
+}
+.game-modes { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; }
+.btn-mode {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.05);
+  color: #a1a1aa;
+  transition: all 0.2s;
+}
+.btn-mode.active { background: #60a5fa; color: white; }
+.game-controls { display: flex; justify-content: center; gap: 10px; margin-bottom: 10px; }
+.btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-primary { background: linear-gradient(135deg, #60a5fa, #3b82f6); color: white; }
+.btn-primary:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(96, 165, 250, 0.4); }
+.btn-secondary { background: rgba(255, 255, 255, 0.1); color: #a1a1aa; }
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.2); }
+.game-instructions { background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 10px; text-align: center; }
+.game-instructions h3 { color: #fff; margin-bottom: 5px; font-size: 0.8rem; }
+.game-instructions p { color: #a1a1aa; font-size: 0.75rem; }
+kbd { background: rgba(96, 165, 250, 0.2); padding: 2px 6px; border-radius: 4px; color: #93c5fd; margin: 0 2px; }

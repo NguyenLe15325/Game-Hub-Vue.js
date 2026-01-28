@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puzzle Slider - Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <a href="/" class="back-btn">← Back to Games</a>
+        <h1>🧩 Puzzle Slider</h1>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="label">Moves</span>
+                <span id="moves" class="value">0</span>
+            </div>
+            <div class="stat">
+                <span class="label">Time</span>
+                <span id="time" class="value">0:00</span>
+            </div>
+            <div class="stat">
+                <span class="label">Best</span>
+                <span id="best" class="value">--</span>
+            </div>
+        </div>
+        
+        <div class="difficulty-selector">
+            <button class="diff-btn active" data-size="3">3×3</button>
+            <button class="diff-btn" data-size="4">4×4</button>
+            <button class="diff-btn" data-size="5">5×5</button>
+        </div>
+        
+        <div id="gameBoard" class="game-board"></div>
+        
+        <div class="controls">
+            <button id="shuffleBtn" class="btn">New Game</button>
+            <button id="solveBtn" class="btn secondary">Show Solution</button>
+        </div>
+        
+        <div class="info">
+            <p>Click tiles adjacent to the empty space to slide them</p>
+            <p>Arrange numbers in order from 1 to complete the puzzle</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

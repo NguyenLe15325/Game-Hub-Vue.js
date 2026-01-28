@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Scramble - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>🔤 Word Scramble</h1>
+      <div class="score-board">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="timer">Time: <span id="timer">60</span>s</div>
+        <div class="streak">Streak: <span id="streak">0</span>🔥</div>
+      </div>
+    </div>
+    <div class="hint-section">
+      <span id="hint" class="hint"></span>
+    </div>
+    <div id="scrambledWord" class="scrambled-word"></div>
+    <input type="text" id="guessInput" class="guess-input" placeholder="Type your answer..." autocomplete="off">
+    <div id="feedback" class="feedback"></div>
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">Start Game</button>
+      <button id="skipBtn" class="btn btn-secondary" disabled>Skip (-5 pts)</button>
+      <button id="hintBtn" class="btn btn-secondary" disabled>Hint (-3 pts)</button>
+    </div>
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Unscramble the letters to form a word. Type your answer and press Enter!</p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

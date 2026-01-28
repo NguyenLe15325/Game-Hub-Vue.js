@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>✊ Rock Paper Scissors ✋</h1>
+    </div>
+    <div class="score-board">
+      <div class="score player-score">You: <span id="playerScore">0</span></div>
+      <div class="score draw-score">Draw: <span id="drawScore">0</span></div>
+      <div class="score computer-score">CPU: <span id="computerScore">0</span></div>
+    </div>
+    <div class="game-arena">
+      <div class="player-choice">
+        <h3>You</h3>
+        <div id="playerChoice" class="choice-display">❓</div>
+      </div>
+      <div class="vs">VS</div>
+      <div class="computer-choice">
+        <h3>Computer</h3>
+        <div id="computerChoice" class="choice-display">❓</div>
+      </div>
+    </div>
+    <div id="result" class="result"></div>
+    <div class="choices">
+      <button class="choice-btn" data-choice="rock">✊<span>Rock</span></button>
+      <button class="choice-btn" data-choice="paper">✋<span>Paper</span></button>
+      <button class="choice-btn" data-choice="scissors">✌️<span>Scissors</span></button>
+    </div>
+    <div class="game-modes">
+      <button class="btn btn-mode" data-mode="best3">Best of 3</button>
+      <button class="btn btn-mode" data-mode="best5">Best of 5</button>
+      <button class="btn btn-mode active" data-mode="endless">Endless</button>
+    </div>
+    <div class="game-controls">
+      <button id="resetBtn" class="btn btn-secondary">Reset Score</button>
+    </div>
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Rock beats Scissors, Scissors beats Paper, Paper beats Rock!</p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

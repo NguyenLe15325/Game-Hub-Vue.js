@@ -1,0 +1,91 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.game-wrapper {
+  background: rgba(26, 26, 46, 0.9);
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.game-header { text-align: center; margin-bottom: 10px; }
+.game-header h1 { color: #06b6d4; font-size: 1.6rem; margin-bottom: 5px; }
+.message { color: #a1a1aa; font-size: 0.95rem; min-height: 24px; }
+.message.win { color: #4ade80; font-weight: bold; }
+.message.lose { color: #f87171; font-weight: bold; }
+.boards-container { display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-bottom: 10px; }
+.board-section { text-align: center; }
+.board-section h3 { color: #94a3b8; font-size: 0.85rem; margin-bottom: 5px; }
+.board {
+  display: grid;
+  grid-template-columns: repeat(10, 28px);
+  grid-template-rows: repeat(10, 28px);
+  gap: 2px;
+  background: #0f0f1a;
+  padding: 5px;
+  border-radius: 8px;
+}
+.cell {
+  width: 28px;
+  height: 28px;
+  background: #1e3a5f;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.8rem;
+}
+.cell:hover { background: #2563eb; }
+.cell.ship { background: #475569; }
+.cell.hit { background: #ef4444; }
+.cell.hit::after { content: '💥'; font-size: 0.7rem; }
+.cell.miss { background: #1e40af; }
+.cell.miss::after { content: '•'; color: #60a5fa; }
+.cell.preview { background: rgba(34, 197, 94, 0.5); }
+.cell.preview.invalid { background: rgba(239, 68, 68, 0.5); }
+.cell.sunk { background: #7f1d1d; }
+.ships-to-place { display: flex; flex-wrap: wrap; gap: 5px; justify-content: center; margin-bottom: 10px; align-items: center; }
+.ships-to-place span { color: #a1a1aa; font-size: 0.8rem; }
+.ship-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.75rem;
+  cursor: pointer;
+  background: rgba(6, 182, 212, 0.2);
+  color: #22d3ee;
+  transition: all 0.2s;
+}
+.ship-btn.selected { background: #06b6d4; color: white; }
+.ship-btn.placed { background: #374151; color: #6b7280; cursor: default; }
+.game-controls { display: flex; justify-content: center; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+.btn {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.btn-primary { background: linear-gradient(135deg, #06b6d4, #0891b2); color: white; }
+.btn-primary:hover:not(:disabled) { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(6, 182, 212, 0.4); }
+.btn-primary:disabled { opacity: 0.5; cursor: not-allowed; }
+.btn-secondary { background: rgba(255, 255, 255, 0.1); color: #a1a1aa; }
+.btn-secondary:hover { background: rgba(255, 255, 255, 0.2); }
+.score-board { display: flex; justify-content: center; gap: 20px; }
+.score { padding: 6px 14px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; }
+.player-score { background: rgba(34, 197, 94, 0.15); color: #4ade80; }
+.enemy-score { background: rgba(239, 68, 68, 0.15); color: #f87171; }

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Air Hockey - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>🏒 Air Hockey</h1>
+      <div class="score-board">
+        <div class="score red-score">Red: <span id="redScore">0</span></div>
+        <div class="score blue-score">Blue: <span id="blueScore">0</span></div>
+      </div>
+    </div>
+    <canvas id="gameCanvas" width="350" height="500"></canvas>
+    <div class="game-modes">
+      <button class="btn btn-mode active" data-mode="pvp">2 Players</button>
+      <button class="btn btn-mode" data-mode="ai">vs Computer</button>
+    </div>
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">Start Game</button>
+      <button id="resetBtn" class="btn btn-secondary">Reset Score</button>
+    </div>
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Red: <kbd>W</kbd><kbd>A</kbd><kbd>S</kbd><kbd>D</kbd> | Blue: <kbd>↑</kbd><kbd>←</kbd><kbd>↓</kbd><kbd>→</kbd></p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html, body { height: 100%; overflow: hidden; }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+.game-wrapper {
+  background: rgba(26, 26, 46, 0.9);
+  border-radius: 16px;
+  padding: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  max-height: 100vh;
+  overflow-y: auto;
+}
+.game-header { text-align: center; margin-bottom: 10px; }
+.game-header h1 { color: #f97316; font-size: 1.6rem; margin-bottom: 8px; }
+.score-board { display: flex; justify-content: center; gap: 20px; }
+.score, .high-score {
+  background: rgba(249, 115, 22, 0.15);
+  padding: 6px 14px;
+  border-radius: 8px;
+  color: #fb923c;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+#gameCanvas {
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 10px;
+  border: 2px solid #f97316;
+}
+.game-controls { display: flex; justify-content: center; margin-bottom: 10px; }
+.btn {
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  transition: all 0.3s ease;
+}
+.btn:hover { transform: translateY(-2px); box-shadow: 0 5px 20px rgba(249, 115, 22, 0.4); }
+.mobile-controls {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 10px;
+}
+.control-btn {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(249, 115, 22, 0.2);
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.control-btn:active { background: rgba(249, 115, 22, 0.5); transform: scale(0.95); }
+.game-instructions { background: rgba(255, 255, 255, 0.05); padding: 10px; border-radius: 10px; text-align: center; }
+.game-instructions h3 { color: #fff; margin-bottom: 5px; font-size: 0.8rem; }
+.game-instructions p { color: #a1a1aa; font-size: 0.75rem; }
+kbd { background: rgba(249, 115, 22, 0.2); padding: 2px 6px; border-radius: 4px; color: #fb923c; margin: 0 2px; }
+@media (min-width: 768px) {
+  .mobile-controls { display: none; }
+}

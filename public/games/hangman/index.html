@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman - Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <a href="/" class="back-btn">← Back to Games</a>
+        <h1>😵 Hangman</h1>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="label">Wins</span>
+                <span id="wins" class="value">0</span>
+            </div>
+            <div class="stat">
+                <span class="label">Losses</span>
+                <span id="losses" class="value">0</span>
+            </div>
+        </div>
+        
+        <div class="category-selector">
+            <button class="cat-btn active" data-cat="animals">🐾 Animals</button>
+            <button class="cat-btn" data-cat="countries">🌍 Countries</button>
+            <button class="cat-btn" data-cat="foods">🍕 Foods</button>
+            <button class="cat-btn" data-cat="sports">⚽ Sports</button>
+        </div>
+        
+        <div class="game-area">
+            <div class="hangman-drawing" id="hangman">
+                <svg viewBox="0 0 200 250">
+                    <!-- Gallows -->
+                    <line x1="40" y1="230" x2="160" y2="230" class="gallows"/>
+                    <line x1="60" y1="230" x2="60" y2="20" class="gallows"/>
+                    <line x1="60" y1="20" x2="130" y2="20" class="gallows"/>
+                    <line x1="130" y1="20" x2="130" y2="50" class="gallows"/>
+                    
+                    <!-- Body parts - initially hidden -->
+                    <circle cx="130" cy="70" r="20" class="body-part head"/>
+                    <line x1="130" y1="90" x2="130" y2="150" class="body-part body"/>
+                    <line x1="130" y1="110" x2="100" y2="130" class="body-part left-arm"/>
+                    <line x1="130" y1="110" x2="160" y2="130" class="body-part right-arm"/>
+                    <line x1="130" y1="150" x2="105" y2="190" class="body-part left-leg"/>
+                    <line x1="130" y1="150" x2="155" y2="190" class="body-part right-leg"/>
+                </svg>
+            </div>
+            
+            <div class="hint" id="hint"></div>
+            <div class="word-display" id="wordDisplay"></div>
+            <div class="wrong-letters" id="wrongLetters"></div>
+        </div>
+        
+        <div class="keyboard" id="keyboard"></div>
+        
+        <div class="controls">
+            <button id="newGameBtn" class="btn">New Word</button>
+            <button id="hintBtn" class="btn secondary">💡 Hint</button>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

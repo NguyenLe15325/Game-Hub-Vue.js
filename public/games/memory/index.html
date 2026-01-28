@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Memory Match - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>🃏 Memory Match</h1>
+      <div class="score-board">
+        <div class="moves">Moves: <span id="moves">0</span></div>
+        <div class="timer">Time: <span id="timer">0:00</span></div>
+        <div class="matches">Matches: <span id="matches">0</span>/8</div>
+      </div>
+    </div>
+    
+    <div id="gameBoard" class="game-board"></div>
+    
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">Start Game</button>
+    </div>
+    
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Click on cards to flip them and find matching pairs</p>
+      <p>Match all pairs in the fewest moves possible!</p>
+    </div>
+  </div>
+  
+  <script src="game.js"></script>
+</body>
+</html>

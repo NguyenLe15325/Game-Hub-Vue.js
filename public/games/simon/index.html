@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Says - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>🎵 Simon Says</h1>
+      <div class="score-board">
+        <div class="score">Level: <span id="level">0</span></div>
+        <div class="high-score">Best: <span id="highScore">0</span></div>
+      </div>
+    </div>
+    <div id="message" class="message">Press Start to Play</div>
+    <div class="game-board">
+      <div class="simon-btn" id="green" data-color="green"></div>
+      <div class="simon-btn" id="red" data-color="red"></div>
+      <div class="simon-btn" id="yellow" data-color="yellow"></div>
+      <div class="simon-btn" id="blue" data-color="blue"></div>
+      <div class="center-circle">
+        <span id="centerText">SIMON</span>
+      </div>
+    </div>
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">Start Game</button>
+    </div>
+    <div class="game-instructions">
+      <h3>How to Play</h3>
+      <p>Watch the pattern, then repeat it by clicking the colors!</p>
+    </div>
+  </div>
+  <script src="game.js"></script>
+</body>
+</html>

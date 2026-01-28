@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maze Runner - Game Hub</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <a href="/" class="back-btn">← Back to Games</a>
+        <h1>🏃 Maze Runner</h1>
+        
+        <div class="stats">
+            <div class="stat">
+                <span class="label">Level</span>
+                <span id="level" class="value">1</span>
+            </div>
+            <div class="stat">
+                <span class="label">Time</span>
+                <span id="time" class="value">0:00</span>
+            </div>
+            <div class="stat">
+                <span class="label">Best</span>
+                <span id="best" class="value">--</span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas" width="500" height="500"></canvas>
+        
+        <div class="controls">
+            <button id="newMazeBtn" class="btn">New Maze</button>
+            <button id="resetBtn" class="btn secondary">Reset Position</button>
+        </div>
+        
+        <div class="info">
+            <p>Use <strong>Arrow Keys</strong> or <strong>WASD</strong> to move</p>
+            <p>Reach the <span style="color: #00ff88;">green exit</span> to complete the level!</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

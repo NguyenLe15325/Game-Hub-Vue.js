@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brick Breaker - Game Hub</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-header">
+      <h1>🧱 Brick Breaker</h1>
+      <div class="score-board">
+        <div class="score">Score: <span id="score">0</span></div>
+        <div class="lives">Lives: <span id="lives">❤️❤️❤️</span></div>
+        <div class="level">Level: <span id="level">1</span></div>
+      </div>
+    </div>
+    
+    <canvas id="gameCanvas" width="480" height="400"></canvas>
+    
+    <div class="game-controls">
+      <button id="startBtn" class="btn btn-primary">Start Game</button>
+    </div>
+    
+    <div class="game-instructions">
+      <h3>Controls</h3>
+      <p>Use <kbd>←</kbd> <kbd>→</kbd> or mouse to move the paddle</p>
+      <p>Destroy all bricks to advance!</p>
+    </div>
+  </div>
+  
+  <script src="game.js"></script>
+</body>
+</html>
