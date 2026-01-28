@@ -96,7 +96,27 @@ const getCardGradient = (id) => {
     memory: 'linear-gradient(135deg, #ec4899 0%, #f43f5e 50%, #0f172a 100%)',
     pong: 'linear-gradient(135deg, #14b8a6 0%, #06b6d4 50%, #0f172a 100%)',
     breakout: 'linear-gradient(135deg, #f59e0b 0%, #ef4444 50%, #0f172a 100%)',
-    flappy: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #0f172a 100%)'
+    flappy: 'linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #0f172a 100%)',
+    '2048': 'linear-gradient(135deg, #eab308 0%, #f97316 50%, #0f172a 100%)',
+    tictactoe: 'linear-gradient(135deg, #8b5cf6 0%, #a855f7 50%, #0f172a 100%)',
+    connect4: 'linear-gradient(135deg, #ef4444 0%, #f59e0b 50%, #0f172a 100%)',
+    spaceinvaders: 'linear-gradient(135deg, #10b981 0%, #059669 50%, #0f172a 100%)',
+    whackamole: 'linear-gradient(135deg, #78350f 0%, #a16207 50%, #0f172a 100%)',
+    minesweeper: 'linear-gradient(135deg, #6b7280 0%, #374151 50%, #0f172a 100%)',
+    typing: 'linear-gradient(135deg, #06b6d4 0%, #0891b2 50%, #0f172a 100%)',
+    checkers: 'linear-gradient(135deg, #dc2626 0%, #1f2937 50%, #0f172a 100%)',
+    rps: 'linear-gradient(135deg, #f472b6 0%, #ec4899 50%, #0f172a 100%)',
+    racing: 'linear-gradient(135deg, #dc2626 0%, #991b1b 50%, #0f172a 100%)',
+    simon: 'linear-gradient(135deg, #22c55e 0%, #eab308 50%, #0f172a 100%)',
+    battleship: 'linear-gradient(135deg, #1e3a8a 0%, #1e40af 50%, #0f172a 100%)',
+    wordscramble: 'linear-gradient(135deg, #7c3aed 0%, #6d28d9 50%, #0f172a 100%)',
+    airhockey: 'linear-gradient(135deg, #0ea5e9 0%, #0284c7 50%, #0f172a 100%)',
+    pingpong2p: 'linear-gradient(135deg, #f97316 0%, #ea580c 50%, #0f172a 100%)',
+    dino: 'linear-gradient(135deg, #84cc16 0%, #65a30d 50%, #0f172a 100%)',
+    slider: 'linear-gradient(135deg, #14b8a6 0%, #0d9488 50%, #0f172a 100%)',
+    colormatch: 'linear-gradient(135deg, #f43f5e 0%, #e11d48 50%, #0f172a 100%)',
+    hangman: 'linear-gradient(135deg, #64748b 0%, #475569 50%, #0f172a 100%)',
+    maze: 'linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #0f172a 100%)'
   }
   return gradients[id] || 'linear-gradient(135deg, #6366f1, #ec4899)'
 }
@@ -108,7 +128,27 @@ const getGameEmoji = (id) => {
     memory: '🃏',
     pong: '🏓',
     breakout: '🧱',
-    flappy: '🐦'
+    flappy: '🐦',
+    '2048': '🔢',
+    tictactoe: '⭕',
+    connect4: '🔴',
+    spaceinvaders: '👾',
+    whackamole: '🔨',
+    minesweeper: '💣',
+    typing: '⌨️',
+    checkers: '♟️',
+    rps: '✊',
+    racing: '🏎️',
+    simon: '🎨',
+    battleship: '🚢',
+    wordscramble: '🔤',
+    airhockey: '🏒',
+    pingpong2p: '🏓',
+    dino: '🦖',
+    slider: '🧩',
+    colormatch: '🎨',
+    hangman: '💀',
+    maze: '🌀'
   }
   return emojis[id] || '🎮'
 }

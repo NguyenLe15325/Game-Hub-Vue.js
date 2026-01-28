@@ -56,7 +56,27 @@ const getThumbnailGradient = (id) => {
     memory: 'linear-gradient(135deg, #ec4899, #f43f5e)',
     pong: 'linear-gradient(135deg, #14b8a6, #06b6d4)',
     breakout: 'linear-gradient(135deg, #f59e0b, #ef4444)',
-    flappy: 'linear-gradient(135deg, #3b82f6, #1d4ed8)'
+    flappy: 'linear-gradient(135deg, #3b82f6, #1d4ed8)',
+    '2048': 'linear-gradient(135deg, #eab308, #f97316)',
+    tictactoe: 'linear-gradient(135deg, #8b5cf6, #a855f7)',
+    connect4: 'linear-gradient(135deg, #ef4444, #f59e0b)',
+    spaceinvaders: 'linear-gradient(135deg, #10b981, #059669)',
+    whackamole: 'linear-gradient(135deg, #78350f, #a16207)',
+    minesweeper: 'linear-gradient(135deg, #6b7280, #374151)',
+    typing: 'linear-gradient(135deg, #06b6d4, #0891b2)',
+    checkers: 'linear-gradient(135deg, #dc2626, #1f2937)',
+    rps: 'linear-gradient(135deg, #f472b6, #ec4899)',
+    racing: 'linear-gradient(135deg, #dc2626, #991b1b)',
+    simon: 'linear-gradient(135deg, #22c55e, #eab308)',
+    battleship: 'linear-gradient(135deg, #1e3a8a, #1e40af)',
+    wordscramble: 'linear-gradient(135deg, #7c3aed, #6d28d9)',
+    airhockey: 'linear-gradient(135deg, #0ea5e9, #0284c7)',
+    pingpong2p: 'linear-gradient(135deg, #f97316, #ea580c)',
+    dino: 'linear-gradient(135deg, #84cc16, #65a30d)',
+    slider: 'linear-gradient(135deg, #14b8a6, #0d9488)',
+    colormatch: 'linear-gradient(135deg, #f43f5e, #e11d48)',
+    hangman: 'linear-gradient(135deg, #64748b, #475569)',
+    maze: 'linear-gradient(135deg, #8b5cf6, #7c3aed)'
   }
   return gradients[id] || 'linear-gradient(135deg, #6366f1, #ec4899)'
 }
@@ -68,7 +88,27 @@ const getGameEmoji = (id) => {
     memory: '🃏',
     pong: '🏓',
     breakout: '🧱',
-    flappy: '🐦'
+    flappy: '🐦',
+    '2048': '🔢',
+    tictactoe: '⭕',
+    connect4: '🔴',
+    spaceinvaders: '👾',
+    whackamole: '🔨',
+    minesweeper: '💣',
+    typing: '⌨️',
+    checkers: '♟️',
+    rps: '✊',
+    racing: '🏎️',
+    simon: '🎨',
+    battleship: '🚢',
+    wordscramble: '🔤',
+    airhockey: '🏒',
+    pingpong2p: '🏓',
+    dino: '🦖',
+    slider: '🧩',
+    colormatch: '🎨',
+    hangman: '💀',
+    maze: '🌀'
   }
   return emojis[id] || '🎮'
 }
